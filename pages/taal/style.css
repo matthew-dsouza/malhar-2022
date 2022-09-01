@@ -1,0 +1,1221 @@
+.SkipLinkText {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  margin: -1px;
+  padding: -1px;
+  overflow: hidden;
+}
+
+.SkipLinkText:focus {
+  color: #2c3531;
+  background-color: #d1e8e2;
+  display: inline-block;
+  height: auto;
+  width: auto;
+  position: static;
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+}
+@font-face {
+  font-family: Clash Display;
+  src: url(../../font/clash);
+}
+/* =============================================================================
+HTML5 CSS Reset Minified - Eric Meyer
+========================================================================== */
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+li {
+  list-style: none;
+}
+
+/* =============================================================================
+My CSS
+========================================================================== */
+
+/* ---- base ---- */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  /* background-color: rgb(33, 56, 189); */
+  /* background: linear-gradient(#00b4d8, #0077b6, #1daec5) no-repeat;  */
+}
+
+main{ 
+  background: linear-gradient(#00b4d8, #0077b6, #1daec5) no-repeat; 
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font: normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas {
+  vertical-align: bottom;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+/* OUR CSS */
+
+/* button css */
+
+.visually-hidden {
+  visibility: hidden;
+}
+
+.button {
+  text-align: center;
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  transition: ease-in-out 0.3s;
+}
+.button a {
+  color: white;
+}
+.button-main {
+  border: 2px solid white;
+  padding: 10%;
+  font-size: 2vh;
+}
+.button:hover {
+  background-color: #fff;
+}
+.button:hover > a {
+  background-color: #fff;
+  color: black;
+}
+
+figure {
+  color: #cecece;
+  font-family: "Overpass", sans-serif;
+  margin: 2% 0%;
+  width: 100%;
+  text-align: center;
+}
+h1 {
+  font-size: 4vh;
+  font-family: "clash grotesk";
+  text-align: center;
+  padding-top: 5%;
+  color: white;
+}
+
+nav {
+  visibility: hidden;
+  position: absolute;
+}
+
+.collapse {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 0vh;
+  width: 100vw;
+  background-color: #111111;
+  position: fixed;
+  z-index: 5;
+  transition: ease-in-out, 0.2s;
+}
+.toggle {
+  position: fixed;
+}
+.collapse.is-clicked {
+  height: 100vh;
+  /* overflow-y: scroll; */
+  padding-bottom: 40%;
+}
+
+.collapse a {
+  font-family: "Overpass", sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 2.5vh;
+}
+
+.collapse ul {
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: ease-in-out, 0.2s;
+  margin-top: 25%;
+  width: 100vw;
+  text-align: center;
+}
+.collapse ul.is-clicked {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.collapse li {
+  margin-top: 8%;
+}
+p {
+  text-align: center;
+}
+
+/* Heading style for big phones */
+@media only screen and (min-width: 321px) and (max-width: 501px) {
+  h1 {
+    padding-top: 15%;
+    font-size: 4vh;
+  }
+}
+
+/* Heading for small phones */
+@media (max-width: 321px) {
+  h1 {
+    padding-top: 20%;
+    font-size: 4.3vh;
+  }
+}
+
+/* MEDIA FOR MOBILE ONLY */
+@media (max-width: 500px) {
+  /* FOR HAMBURGER */
+  .player {
+    transform: scale(0.8);
+  }
+
+  .toggle {
+    position: absolute;
+    cursor: pointer;
+    margin: 8% 5%;
+  }
+  .toggle input {
+    display: none;
+  }
+  .toggle input + div {
+    width: 30px;
+    height: 18px;
+    position: relative;
+  }
+  .toggle input + div div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transition: transform 0.5s ease;
+  }
+  .toggle input + div div span {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  .toggle input + div div span:first-child {
+    top: 0;
+  }
+  .toggle input + div div span:first-child:before,
+  .toggle input + div div span:first-child:after {
+    top: 0;
+  }
+  .toggle input + div div span:last-child {
+    bottom: 0;
+  }
+  .toggle input + div div span:last-child:before,
+  .toggle input + div div span:last-child:after {
+    bottom: 0;
+  }
+  .toggle input + div div span:before,
+  .toggle input + div div span:after {
+    content: "";
+    display: block;
+    width: 47%;
+    height: 2px;
+    border-radius: 1px;
+    background: #fff;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.5s ease, border-radius 0.3s ease,
+      background 0.4s ease;
+  }
+  .toggle input + div div span:before {
+    left: 0;
+    transform-origin: 0 50%;
+    transform: translate(1px, 0) scaleX(1.1);
+  }
+  .toggle input + div div span:after {
+    right: 0;
+    transform-origin: 100% 50%;
+    transform: translate(-1px, 0) scaleX(1.1);
+  }
+  .toggle input + div svg {
+    display: block;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2px;
+    width: 44px;
+    height: 44px;
+    stroke-linecap: round;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -22px 0 0 -22px;
+    stroke-dasharray: 0 82.801 8 82.801;
+    stroke-dashoffset: 82.801;
+    transform-origin: 50% 50%;
+    backface-visibility: hidden;
+    transform: scale(1);
+    transition: stroke-dashoffset 0.5s ease, stroke-dasharray 0.6s ease,
+      transform 0.5s ease, stroke 0.4s ease;
+  }
+  .toggle input + div svg:nth-child(3) {
+    transform: rotate(180deg) scale(1);
+  }
+  .toggle input:checked + div div {
+    transform: rotate(90deg);
+  }
+  .toggle input:checked + div div span:before,
+  .toggle input:checked + div div span:after {
+    background: #fff;
+  }
+  .toggle input:checked + div div span:first-child:before {
+    transform: rotate(45deg) translate(2.2px, -3px) scaleX(1.05);
+  }
+  .toggle input:checked + div div span:first-child:after {
+    transform: rotate(-45deg) translate(-2.2px, -3px) scaleX(1.05);
+  }
+  .toggle input:checked + div div span:last-child:before {
+    transform: rotate(-45deg) translate(2.2px, 3px) scaleX(1.05);
+  }
+  .toggle input:checked + div div span:last-child:after {
+    transform: rotate(45deg) translate(-2.2px, 3px) scaleX(1.05);
+  }
+  .toggle input:checked + div svg {
+    stroke-dashoffset: 62;
+    stroke-dasharray: 0 82.801 62 82.801;
+    transform: rotate(90deg);
+    stroke: #fff;
+  }
+  .toggle input:checked + div svg:nth-child(3) {
+    transform: rotate(270deg);
+  }
+
+  html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  * {
+    box-sizing: inherit;
+  }
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  body .dribbble {
+    position: fixed;
+    display: block;
+    right: 24px;
+    bottom: 24px;
+  }
+  body .dribbble img {
+    display: block;
+    width: 76px;
+  }
+  /* 
+.flipbook-viewport{
+padding-left: 13%;
+} */
+}
+@media (max-width: 320px) {
+  .player {
+    transform: scale(0.6);
+  }
+}
+.image {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background-color: red;
+  margin-top: -15%;
+  left: 50%;
+  margin-left: -27%;
+  background-image: url(https://i.kym-cdn.com/entries/icons/original/000/016/546/hidethepainharold.jpg);
+  background-position: center;
+  background-size: 180%, 180%;
+  background-repeat: no-repeat;
+}
+
+.box {
+  width: 80vw;
+  height: 60vh;
+  background-color: black;
+  border: 1px solid white;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section {
+  padding-top: 45%;
+}
+.box h3 {
+  color: white;
+  text-align: center;
+  z-index: 10s;
+  font-size: 4vh;
+  margin-top: 50%;
+  font-weight: lighter;
+  font-family: "Overpass", sans-serif;
+}
+.box p {
+  color: white;
+  padding: 8%;
+  font-size: 2vh;
+  font-family: "Overpass", sans-serif;
+}
+
+/* MEDIA FOR EXCEPT MOBILE */
+@media (min-width: 500px) {
+  .button {
+    width: 20vw;
+    margin-top: 10%;
+  }
+  .button-main {
+    padding: 3%;
+  }
+  figure {
+    font-size: 2.5vh;
+    margin-top: 1%;
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+  .collapse {
+    visibility: hidden;
+  }
+  /* Hamburger CSS */
+  .toggle {
+    visibility: hidden;
+    position: absolute;
+    z-index: 120;
+  }
+  .dribbble {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  /* NAV CSS */
+  nav {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    visibility: visible;
+    margin-bottom: 20%;
+  }
+  ul {
+    padding: 2%;
+  }
+  li {
+    font-size: 1vw;
+    display: inline;
+    padding: 1%;
+    margin-left: 4%;
+  }
+  a {
+    font-family: "Overpass", sans-serif;
+
+    text-decoration: none;
+    color: white;
+  }
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: white;
+  }
+
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffcb9a;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .hover-underline-animation:hover {
+    color: #ffcb9a;
+  }
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  outline: none;
+}
+
+body {
+  overflow-x: hidden;
+
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 40%;
+}
+
+.player-controls {
+  background-color: #0e518d;
+  border-radius: 15px;
+  width: 425px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.song-panel {
+  background-color: #052e70;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  height: 75px;
+  justify-content: flex-end;
+  padding: 0 12px 12px 12px;
+  transform: translate3d(0, 100%, 0);
+  transition: all 1s ease;
+  width: 395px;
+  z-index: 0;
+}
+.song-panel .song-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 230px;
+}
+.song-panel .song-info .song-info__title {
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.song-panel .song-info .song-info__artist {
+  color: rgb(204, 202, 202);
+  font-size: 0.7rem;
+  margin-bottom: 10px;
+}
+.song-panel .song-info .progress {
+  background: #fff;
+  border-radius: 3px;
+  cursor: ew-resize;
+  display: flex;
+  flex: 10;
+  flex-basis: 100%;
+  max-height: 5px;
+  position: relative;
+  transition: height 0.3s;
+  width: 100%;
+}
+.song-panel .song-info .progress .progress__filled {
+  background: #b6b4b4;
+  flex: 0;
+  flex-basis: 0%;
+  width: 50%;
+}
+.song-panel {
+  visibility: hidden;
+}
+.song-panel.playing {
+  transform: translate3d(0, 0, 0);
+  transition: all 1s ease;
+  visibility: visible;
+}
+
+button {
+  height: 80px;
+  width: 80px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: #dfdbe0;
+  margin: 0 5px;
+  border-radius: 15px;
+  position: relative;
+}
+
+button:hover,
+button.playing {
+  background-color: #e0dee1;
+  color: #fff;
+}
+
+button.play span.pause {
+  background-color: white;
+  position: absolute;
+  top: 23px;
+  height: 34px;
+  width: 10px;
+  display: block;
+  border-radius: 3px;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+button.play span.pause.left {
+  left: 0;
+}
+
+button.play.playing span.pause.left {
+  left: 25px;
+  opacity: 1;
+  transition: left 0.5s ease, opacity 0.8s ease;
+}
+
+button.play span.pause.right {
+  right: 0;
+}
+
+button.play.playing span.pause.right {
+  right: 25px;
+  opacity: 1;
+  transition: right 0.5s ease, opacity 0.8s ease;
+}
+
+button.play i {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+button.play.playing i {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.player-controls {
+  position: relative;
+}
+.player-controls .spinner {
+  height: 130px;
+  width: 130px;
+  position: absolute;
+  top: -40px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.player-controls .spinner.spin {
+  animation: spin 5s linear infinite;
+}
+.player-controls .spinner .spinner__disc {
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  transition: all 1s ease;
+  background-image: url(http://www.placecage.com/c/127/127);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.player-controls .spinner .spinner__disc.scale {
+  transform: scale(1.17);
+  transition: all 1s ease;
+}
+.player-controls .spinner .spinner__disc.scale .center__disc {
+  color: #e4d6e9;
+  transition: all 1s ease;
+}
+.player-controls .spinner .spinner__disc .center__disc {
+  background-color: white;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* navbar styling */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  /* padding: 20px 0; */
+  background: rgba(34, 34, 34, 0);
+  font-family: montserrat;
+  transition: all 0.3s ease;
+  /* margin-top: 3vh; */
+}
+.navbar.sticky {
+  padding: 0px 0 20px 0;
+  background-color: #333333a9;
+}
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+}
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+}
+.navbar .menu li a,
+.navbar .menu li p {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Montserrat";
+  /* margin-left: 25px; */
+  transition: color 0.3s ease;
+}
+.navbar .menu li a:hover,
+.navbar .menu li p:hover {
+  color: #ffcb9a;
+}
+/* .navbar.sticky .menu li a:hover,
+.navbar.sticky .menu li p:hover {
+  color: #ffcb9a;
+} */
+
+.menu {
+  width: 75rem;
+}
+
+/* menu btn styling */
+.menu-btn {
+  color: rgb(0, 0, 0);
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-lol {
+  display: none;
+}
+
+/* hover animation */
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #000000;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffcb9a;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.hover-underline-animation:hover {
+  color: #000000;
+}
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* responsive media query start */
+/* for phone and tablet screens */
+@media (max-width: 1050px) {
+  .navbar.sticky {
+    background-color: none;
+  }
+
+  .navbar {
+    padding-bottom: 1rem;
+  }
+
+  .navbar .max-width {
+    height: 3rem;
+  }
+
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+  .menu-btn i.active:before {
+    content: "\f00d";
+  }
+
+  .nav-lol {
+    display: block;
+    color: transparent;
+  }
+  /* .navbar {
+    background-color: rgb(0, 0, 0);
+  } */
+
+  .menu-btn {
+    margin-top: 2.5rem;
+  }
+  .navbar .menu {
+    position: fixed;
+    height: 110vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: linear-gradient(to right, #3a7bd5, #4d7e97);
+    text-align: center;
+    margin-bottom: 30%;
+    transition: all 0.3s ease;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .navbar .menu.active {
+    left: 0;
+  }
+  .navbar .menu li {
+    display: block;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+  .navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.1rem;
+  }
+}
+
+@media (min-width: 1051px) {
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    width: 75rem;
+    padding: 1rem 0;
+  }
+
+  .navbar.sticky {
+    padding: 0px 0 0px 0;
+    background-color: #333333a9;
+  }
+}
+
+/* NAVBAR HAMBURGER BUTTON STYLING */
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /* background-color: rgba(0, 0, 0, 0.614); */
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #fff;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+.ham4 .top {
+  stroke-dasharray: 40 121;
+}
+.ham4 .bottom {
+  stroke-dasharray: 40 121;
+}
+.ham4.active .top {
+  stroke-dashoffset: -68px;
+}
+.ham4.active .bottom {
+  stroke-dashoffset: -68px;
+}
+
+@media (min-width: 1080px) {
+  .menu {
+    display: flex;
+    justify-content: center;
+    /* gap: 1.5rem; */
+    width: 75rem;
+  }
+}
+
+.taal-subtitle {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-weight: 350;
+  font-family: "Clash Grotesk";
+  color: white;
+}
+.taal-title {
+  text-align: center;
+  font-size: 5.5rem;
+  margin-top: 1rem;
+  /* z-index: -2; */
+  font-weight: 450;
+  font-family: "Clash Grotesk";
+  color: white;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 40%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.footnote h3,
+.queer {
+  font-size: 1.75rem;
+  margin: 0.5% 0%;
+  transform: skew(-10deg);
+  -webkit-transform: skew(-10deg);
+  font-family: clash grotesk;
+}
+
+/* ============================================================== */
+/* ============================================================== */
+/* ============================================================== */
+.flipbook-viewport {
+  width: 100%;
+  height: 85%;
+}
+
+@media (min-width: 701px) {
+.audiobook-title{
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+  .flipbook-viewport {
+    width: 100%;
+    height: 65%;
+    margin-top: 2rem;
+  }
+
+  /* .flipbook-viewport .container {
+    position: relative;
+    cursor: pointer;
+    width: 100vw;
+    left: 0%;
+  } */
+
+  .container {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* .flipbook {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    left: 38.6%;
+    transform: translateX(-50%);
+  } */
+}
+
+/* Flipbook size for big phones */
+@media only screen and (min-width: 321px) and (max-width: 501px) {
+  .flipbook-viewport {
+    width: 100%;
+    height: 65%;
+    margin-top: 1.5rem;
+  }
+
+  /* .flipbook-viewport .container {
+    position: relative;
+    cursor: pointer;
+    width: 100vw;
+    left: 0;
+  } */
+
+  .container {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* .flipbook {
+    margin-left: auto;
+    margin-right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  } */
+}
+
+/* Flipbook size for small af phones */
+@media only screen and (max-width: 321px) {
+  .flipbook-viewport {
+    width: 100%;
+    height: 65%;
+  }
+
+  /* .flipbook-viewport .container {
+    position: relative;
+    cursor: pointer;
+    width: 100vw;
+    left: 0;
+  } */
+
+  .container {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* .flipbook {
+    margin-left: auto;
+    margin-right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  } */
+}
+
+.flipbook-viewport .flipbook {
+  width: 10rem;
+  height: 6rem;
+}
+
+.flipbook-viewport .page {
+  width: 10rem;
+  height: 6rem;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.flipbook .page {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.flipbook-viewport .page img {
+  user-select: none;
+  margin: 0;
+}
+
+.flipbook-viewport .shadow {
+  transition: box-shadow 0.5s;
+  box-shadow: 0 0 20px #ccc;
+}
+
+/* =========================================== */
+.footnote {
+  width: 100%;
+  margin: 0 0 3rem 0;
+}
+
+.copyright {
+  display: flex;
+  width: 425px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright figure{
+  margin-top: 1rem;
+  font-size: 0.5rem;
+}

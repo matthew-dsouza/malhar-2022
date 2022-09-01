@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container_ka_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+ 
+    /* background-image: linear-gradient(45deg,rgb(171, 59, 173) 60%, #9381ff 50%); */
+    background-image: linear-gradient(45deg,#0E518D 60%, #052E70 50%);
+
+
+  }
+  
+  body .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    gap: 5rem;
+    margin-top: 7rem;
+    /* margin: 40px 0; */
+  }
+  
+  body .container .card {
+    position: relative;
+    min-width: 45rem;
+    height: 27rem;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+      inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+      5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    /* margin: 30px; */
+    transition: 0.5s;
+  }
+  
+  .content {
+    z-index: 1;
+  }
+  
+  body .container .card:nth-child(1) .box .content a,
+  body .container .card:nth-child(2) .box .content a,
+  body .container .card:nth-child(3) .box .content a,
+  body .container .card:nth-child(4) .box .content a,
+  body .container .card:nth-child(5) .box .content a,
+  body .container .card:nth-child(6) .box .content a {
+    background: #ffe44e;
+  }
+  
+  body .container .card .box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: rgb(90, 203, 255);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  body .container .card .box:hover {
+    transform: translateY(-50px);
+  }
+  
+  body .container .card .box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(178, 255, 255, 0.274);
+  }
+  
+  body .container .card .box .content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  body .container .card .box .content h2 {
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8rem;
+    color: rgba(0, 0, 0, 0.1);
+    z-index: 99;
+  }
+  
+  body .container .card .box .content h3 {
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    z-index: 1;
+    transition: 0.5s;
+    
+    font-weight: 500;
+  
+    font-family: "Clash Grotesk", montserrat;
+  }
+  
+  body .container .card .box .content p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+    transition: 0.5s;
+  
+    font-family: montserrat, sans-serif;
+  }
+  
+  body .container .card .box .content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: black;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+    font-family: montserrat, sans-serif;
+  }
+  body .container .card .box .content a:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    background: #fff;
+    color: #000;
+  }
+  
+  /* NAVBAR */
+  
+  @media only screen and (max-width: 1050px) {
+    body .container .card {
+      min-width: 22rem;
+      height: 45rem;
+    }
+  }
+  
+  /*  */
+  /*  */
+  /*  */
+  
+  /* navbar styling */
+  .navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    /* padding: 20px 0; */
+    background: rgba(34, 34, 34, 0);
+    font-family: montserrat;
+    transition: all 0.3s ease;
+    /* margin-top: 3vh; */
+  }
+  .navbar.sticky {
+    padding: 0px 0 20px 0;
+    background-color: #333333a9;
+  }
+  .navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+  }
+  .navbar .menu li {
+    list-style: none;
+    display: inline-block;
+  }
+  .navbar .menu li a,
+  .navbar .menu li p {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    /* margin-left: 25px; */
+    transition: color 0.3s ease;
+  }
+  .navbar .menu li a:hover,
+  .navbar .menu li p:hover {
+    color: #ffcb9a;
+  }
+  /* .navbar.sticky .menu li a:hover,
+  .navbar.sticky .menu li p:hover {
+    color: #ffcb9a;
+  } */
+  
+  .menu {
+    width: 75rem;
+  }
+
+  
+  /* menu btn styling */
+  .menu-btn {
+    color: rgb(0, 0, 0);
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .nav-lol {
+    display: none;
+  }
+  
+  /* hover animation */
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #000000;
+  }
+  
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffcb9a;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .hover-underline-animation:hover {
+    color: #000000;
+  }
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  /* responsive media query start */
+  /* for phone and tablet screens */
+  @media (max-width: 1050px) {
+    .navbar.sticky {
+      background-color: none;
+    }
+  
+    .navbar {
+      padding-bottom: 1rem;
+    }
+  
+    .navbar .max-width {
+      height: 3rem;
+    }
+  
+    .menu-btn {
+      display: block;
+      z-index: 999;
+    }
+    .menu-btn i.active:before {
+      content: "\f00d";
+    }
+  
+    .nav-lol {
+      display: block;
+      color: transparent;
+    }
+    /* .navbar {
+      background-color: rgb(0, 0, 0);
+    } */
+  
+    .menu-btn {
+      margin-top: 2.5rem;
+    }
+    .navbar .menu {
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      left: -100%;
+      top: 0;
+      background: linear-gradient(to right, #3a7bd5, #4d7e97);
+      text-align: center;
+      padding: 2rem 0;
+      transition: all 0.3s ease;
+    }
+    .menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .navbar .menu.active {
+      left: 0;
+    }
+    .navbar .menu li {
+      display: block;
+    }
+    .navbar .menu li a {
+      display: inline-block;
+      margin: 20px 0;
+      font-size: 25px;
+    }
+    .navbar .max-width {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.1rem;
+    }
+  }
+  
+  @media (min-width: 1051px) {
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      width: 75rem;
+      padding: 1rem 0;
+    }
+  
+    .navbar.sticky {
+      padding: 0px 0 0px 0;
+      background-color: #333333a9;
+    }
+  }
+  
+  /* NAVBAR HAMBURGER BUTTON STYLING */
+  
+  .ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  
+    /* background-color: rgba(0, 0, 0, 0.614); */
+  }
+  .hamRotate.active {
+    transform: rotate(45deg);
+  }
+  .hamRotate180.active {
+    transform: rotate(180deg);
+  }
+  .line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #fff;
+    stroke-width: 5.5;
+    stroke-linecap: round;
+  }
+  .ham4 .top {
+    stroke-dasharray: 40 121;
+  }
+  .ham4 .bottom {
+    stroke-dasharray: 40 121;
+  }
+  .ham4.active .top {
+    stroke-dashoffset: -68px;
+  }
+  .ham4.active .bottom {
+    stroke-dashoffset: -68px;
+  }
+  
+  @media (min-width: 1080px) {
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      width: 75rem;
+    }
+  }
+  
+  /*  */
+
+  .for_more_info-section {
+    width: 100%;
+    text-align: center;
+    margin-top: 2vh;
+  }
+  
+  .for_more_info-section button {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+    font-size: 1.2rem;
+    font-family: clash grotesk;
+  }
+  
+  .for_more_info-section button:hover {
+    background-color: #2199e8;
+    color: #fff;
+    transition: 0.5s;
+  }
+
+  .for_more_info-section h1{
+    font-size: 4rem;
+    font-weight: 400;
+    font-family: clash grotesk;
+    margin-bottom: 5vh;
+  }
+  
+  .events-title {
+    text-align: center;
+    font-size: 5.5rem;
+    margin-top: 7rem;
+    /* z-index: -2; */
+    font-weight: 450;
+    font-family: clash grotesk;
+    color: white;
+  }

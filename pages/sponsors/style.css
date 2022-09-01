@@ -1,0 +1,411 @@
+@font-face {
+  font-family: Clash Display;
+  src: url(../../font/clash);
+}
+
+main {
+  background: linear-gradient(#38a4de, #00b4d8, #1daec5) no-repeat;
+}
+
+.SkipLinkText {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  margin: -1px;
+  padding: -1px;
+  overflow: hidden;
+}
+
+.SkipLinkText:focus {
+  color: #2c3531;
+  background-color: #d1e8e2;
+  display: inline-block;
+  height: auto;
+  width: auto;
+  position: static;
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* navbar styling */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  /* padding: 20px 0; */
+  background: rgba(34, 34, 34, 0);
+  font-family: montserrat;
+  transition: all 0.3s ease;
+  /* margin-top: 3vh; */
+}
+.navbar.sticky {
+  padding: 0px 0 20px 0;
+  background-color: #333333a9;
+}
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+}
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+.navbar .menu li a,
+.navbar .menu li p {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  /* margin-left: 25px; */
+  transition: color 0.3s ease;
+}
+.navbar .menu li a:hover,
+.navbar .menu li p:hover {
+  color: #ffcb9a;
+}
+/* .navbar.sticky .menu li a:hover,
+  .navbar.sticky .menu li p:hover {
+    color: #ffcb9a;
+  } */
+
+.menu {
+  width: 75rem;
+}
+
+/* menu btn styling */
+.menu-btn {
+  color: rgb(0, 0, 0);
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-lol {
+  display: none;
+}
+
+/* hover animation */
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #000000;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffcb9a;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.hover-underline-animation:hover {
+  color: #000000;
+}
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* responsive media query start */
+/* for phone and tablet screens */
+@media (max-width: 1050px) {
+  .navbar.sticky {
+    background-color: none;
+  }
+
+  .navbar {
+    padding-bottom: 1rem;
+  }
+
+  .navbar .max-width {
+    height: 3rem;
+  }
+
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+  .menu-btn i.active:before {
+    content: "\f00d";
+  }
+
+  .nav-lol {
+    display: block;
+    color: transparent;
+  }
+  /* .navbar {
+      background-color: rgb(0, 0, 0);
+    } */
+
+  .menu-btn {
+    margin-top: 2.5rem;
+  }
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: linear-gradient(to right, #3a7bd5, #4d7e97);
+    text-align: center;
+    padding: 2rem 0;
+    transition: all 0.3s ease;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .navbar .menu.active {
+    left: 0;
+  }
+  .navbar .menu li {
+    display: block;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+  .navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.1rem;
+  }
+}
+
+@media (min-width: 1051px) {
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    width: 75rem;
+    padding: 1rem 0;
+  }
+
+  .navbar.sticky {
+    padding: 0px 0 0px 0;
+    background-color: #333333a9;
+  }
+}
+
+/* NAVBAR HAMBURGER BUTTON STYLING */
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /* background-color: rgba(0, 0, 0, 0.614); */
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #fff;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+.ham4 .top {
+  stroke-dasharray: 40 121;
+}
+.ham4 .bottom {
+  stroke-dasharray: 40 121;
+}
+.ham4.active .top {
+  stroke-dashoffset: -68px;
+}
+.ham4.active .bottom {
+  stroke-dashoffset: -68px;
+}
+
+@media (min-width: 1080px) {
+  .menu {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 75rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .main_title h1 {
+    font-size: 4rem;
+  }
+}
+
+/*  */
+
+.for_more_info-section {
+  width: 100%;
+  text-align: center;
+  margin-top: 2vh;
+}
+
+.for_more_info-section button {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  transition: 0.5s;
+  font-size: 1.2rem;
+  font-family: clash grotesk;
+}
+
+.for_more_info-section button:hover {
+  background-color: #2199e8;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.for_more_info-section h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  font-family: clash grotesk;
+  margin-bottom: 5vh;
+}
+
+.events-title {
+  text-align: center;
+  font-size: 5.5rem;
+  margin-top: 7rem;
+  /* z-index: -2; */
+  font-weight: 450;
+  font-family: clash grotesk;
+  color: white;
+}
+
+.main_title h1 {
+  font-size: 6rem;
+  position: relative;
+  padding-top: 7.5rem;
+}
+
+h1 {
+  font-weight: 500;
+  text-align: center;
+  font-family: "Clash Grotesk";
+}
+
+a img {
+  position: relative;
+  width: 12rem;
+  justify-items: center;
+}
+
+.sub-title h1 {
+  position: relative;
+  font-size: 7rem;
+}
+
+.test h1 {
+  margin-top: -3rem;
+  font-size: 4rem;
+}
+.title h1 {
+  position: relative;
+  font-size: 4.5rem;
+  margin-top: 6rem;
+}
+@media (max-width: 1050px) {
+  .title h1 {
+    font-size: 3rem;
+    margin-top: 5rem;
+  }
+  .main_title h1 {
+    font-size: 5rem;
+  }
+  .sub-title h1 {
+    font-size: 10rem;
+  }
+  .fuck_you h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.insta {
+  background-color: white;
+  border-radius: 3.5rem;
+  width: 12rem;
+}
+.ratna {
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 12rem;
+}
+.greenverse {
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 10rem;
+}
+.sponsors {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: end;
+  flex-wrap: wrap;
+}
+
+/* .spon{
+    display: flex;
+    align-items: center;
+    padding: 10rem;
+    
+} */
+.spon-1,
+.spon-2,
+.spon-3,
+.spon-4,
+.spon-5,
+.spon-6,
+.spon-7,
+.spon-8,
+.spon-9,
+.spon-10,
+.spon-11,
+.spon-12,
+.spon-13,
+.spon14 {
+  width: 20rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spon-8 a img {
+  margin-top: -3rem;
+  width: 20rem;
+}
+
+.fuck_you h1 {
+  align-items: center;
+}
+
+.fuck_you {
+  padding: 0.5rem;
+}
+
+.spon-4 img {
+  padding-bottom: 25%;
+}
+
+.spon-2 img {
+  border-radius: 3rem;
+}
